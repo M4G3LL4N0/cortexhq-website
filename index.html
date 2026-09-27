@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CortexHQ — a simulated company brain</title>
+    <meta
+      name="description"
+      content="CortexHQ is a simulated company brain. Paste sample notes, ask a question, and get a structured answer with source cards, owners, and a decision timeline. No live Slack, email, CRM, or customer data."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <p class="banner" role="status">
+      Simulated company brain. No live Slack, email, CRM, or customer data.
+    </p>
+    <header class="mast">
+      <a class="brand" href="/">CortexHQ</a>
+      <nav>
+        <a href="#ask">Ask</a>
+        <a href="#memory">Memory</a>
+        <a href="#request">Request</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Operating memory · labeled simulator</p>
+          <h1>Ask the company a question. Get the answer with a source trail.</h1>
+          <p class="lede">
+            CortexHQ is a workspace for rehearsing company memory: pick sample
+            sources, paste internal notes, and ask what was decided. It returns
+            a structured answer, source cards, open decisions with owners, a
+            memory map, and a timeline. It does not connect to your real tools.
+          </p>
+          <div class="actions">
+            <a class="btn primary" id="primary-cta" href="#ask">Ask the simulated brain</a>
+            <a class="btn" href="#memory">See what it remembers</a>
+          </div>
+        </div>
+        <aside class="card" aria-label="Simulation notice">
+          <h2>What this is not</h2>
+          <ul>
+            <li>Not a live Slack, email, or CRM connector.</li>
+            <li>Not a production knowledge base of a real company.</li>
+            <li>Not trained on customer conversations.</li>
+          </ul>
+          <p>
+            The product exists so operators can practice asking, citing, and
+            assigning — on sample notes they paste themselves.
+          </p>
+        </aside>
+      </section>
+
+      <section id="ask">
+        <h2>Ask a sample question</h2>
+        <p>
+          These answers are scripted from the product’s demo posture. They are
+          not retrieved from a live corpus.
+        </p>
+        <form id="ask-form" class="ask">
+          <label>
+            Question
+            <select name="q">
+              <option value="pricing">Why did we change pricing last quarter?</option>
+              <option value="hire">Who owns onboarding for new hires?</option>
+              <option value="conflict">Where do the docs disagree with later notes?</option>
+            </select>
+          </label>
+          <button type="submit">Show the memory object</button>
+        </form>
+        <article id="answer" class="answer" hidden></article>
+      </section>
+
+      <section id="memory">
+        <h2>What a run stores</h2>
+        <ul class="facts">
+          <li>Sources you selected — never a silent pull from a real workspace.</li>
+          <li>Notes you pasted — treated as sample material.</li>
+          <li>The question, the structured answer, and the source cards.</li>
+          <li>Open decisions with owners, when the notes name them.</li>
+          <li>A timeline of how the answer was assembled in that run.</li>
+        </ul>
+      </section>
+
+      <section id="request">
+        <h2>Request a simulator walkthrough</h2>
+        <p>This page does not send email. Submit to open a mail draft on your machine.</p>
+        <form id="request-form" class="request">
+          <label>Name <input name="name" required autocomplete="name" /></label>
+          <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+          <label>What you want to simulate <textarea name="note" required rows="4"></textarea></label>
+          <button type="submit">Open a request draft</button>
+          <p class="status" id="request-status" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>CortexHQ · simulated company brain · no live customer data</footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

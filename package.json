@@ -1,0 +1,9 @@
+{
+  "name": "cortexhq-website",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Public website for CortexHQ, a simulated company brain with no live customer data.",
+  "scripts": {
+    "build": "node -e \"console.log('static site')\""
+  }
+}
